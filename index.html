@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="https://unpkg.com/lucide@latest"></script>
+        <title>Perfume Shopify</title>
+    </head>
+    <body>
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo"><h1>QueenStella</h1></div>
+               
+                <ul class="nav-link">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                      <li><a href="#blog">Blog</a></li>
+                </ul>
+                <!---search-->
+                <a href="search.html">
+                    <i data-lucide="search"></i>
+                </a>
+                <a href="cart.html">
+                    <i data-lucide="shopping-cart"></i>
+                </a>
+               <a href="user.html">
+                 <i data-lucide="user"></i>
+               </a>
+            </nav>
+            </div>
+    <section class="container">
+        <div class="hero">
+            <!--left side-->
+        <div class="hero-text">
+            <h1>Fragrance For<br> Elegant Woman</h1>
+            <p>An expression of femininity in its purest form. where every note blooms with grace and memory. A fragrance that lingers like a soft embrace. inspired by the timeless beauty of a womaan spirity. The essence of romance, captured in a single breath</p>
+             <a href="product.html" class="btn" onclick="gopage(event,this)">
+                            Shop the Collection
+             </a>   
+        </div>
+        <!---right side-->
+        <div class="hero-image">
+             <img src="images/flower.png" class="big-img" alt="">
+             <img src="images/pinknow.png" class="small-img" alt="">
+        </div>
+        </div>
+        </section>
+        <div class="second-container">
+        <section id="product">
+            <div class="product-container">
+            <!--product-left-->
+            <div class="product-right">
+            <h2>Product</h2>
+                <p>At Queen Stella, we believe fragrance is more than a scent. its an emotion, a memory, a quiet reflection of who you are. Inspired by the timeless elegance of femininity, each perfume is crafted with care, blending rare florals and soft musks  to create an aura that lingers gently, yet speaks volumes.</p>
+                        <!----image to import-->
+                    <div class="productimage-right">
+                        <img src="images/ourproduct.png"> 
+                    </div>                   
+            </div>
+            <!--right side-->
+            <div class="product-left">
+                    <!---image to import-->
+                <div class="productimage-left">
+                    <img src="images/treeperfume.png">
+                </div>
+                 <p> At Queen Stella, we don't make perfume. we craft experinces that linger longer after the scent fades. soft petals, strong souls.</p>
+            </div>
+            </div>
+        </section>
+        <section id="about">
+             <h2>About</h2>
+              <div class="about-cards">
+            <div class="organic">
+                <img src="images/badage.png"/>
+                <h3>100% organic</h3>
+                <p>Each ingredient is carefully sourced from organic farm, free from synthetic addi.</p>
+            </div>
+            <div class="delivering">
+            <img src="images/Truck.png"/>         
+            <h3>Fast delivering</h3>
+            <p>We deliver our services within 2 working days. delivering is free</p>
+            </div>
+             <div class="side-effect">
+            <img src="images/Trust.png"/>         
+            <h3>No side effect</h3>
+            <p>crafted with care from gentle, skin-friendly ingredients, our perfumeis designed to delight - never irritate</p>
+            </div>
+            </div>
+            <a href="products.html">
+                <button>View All Product</button>
+            </a>
+            </section>
+            <section id="certificate">
+            <div class="certificate-container">
+                <div class="certificate-image">
+                    <!---image to import-->
+                    <img src="images/highquality.png">
+                    </div>
+                    <!--certificate-right-->
+                    <div class="certificate-text">
+                    <h2>High Certified and Quality Product</h2>
+            <p>Each creation is crafted with precision, using only the finest ingredients and meticulous attention to detail.<br> our commitmennt to quality ensures every fragrance embodies elegance, purity, and lasting beauty.</p>
+            </div>
+            </div>
+            </section>
+        <section id="testimonial">
+            <h2>What Our Happy Customer Say</h2>
+            <div class="Testimonial-card">
+                <div class="ella-testimonal">
+                <div class="Testimonial-image">
+                <img src="images/ella  review.png">
+                <h3>Ella</h3>
+            </div>
+               <div> <p>She believes that our fragrance can bring out the woman power in her. she said that the fragrance can make you feel unstoppable</p>
+            </div>
+                </div>
+            <div class="cara-testimonal">
+                <div class="Testimonial-image">
+                    <img src="images/cara review.png">
+                     <h3>Cara</h3>
+                    </div>
+                    <div>
+                    <p> cara said that our pproduct feel fresh and make her feel fresh all day and relaxed</p>
+                    </div>
+                </div>
+                 </div>
+            </section>
+            </div>
+            <div>
+                <!--radio button-->
+               <div class="pagination">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+               </div>
+            </div>
+        </section>
+        </div>
+        </section>
+        <section id="blog">
+            <div class="blog-container">
+            <div class="blogtext">
+                <h2>Smell Good, Feel Good</h2>
+                <p>Each creation is crafted with precision, using only the finest ingredient and meticulous attention detail. our commitmennt to quality ensures every fragrance embodies elegance, purity, and lasting beauty </p>
+            </div>
+                <img src="images/Group 1 (1).png">
+            </div>
+             <a href="product.html">
+                <button>Shop the Collection</button>
+             </a>
+        </section>
+        </section>
+        <script>
+                const dots =document.querySelectorAll('.dot');
+
+                dots.forEach(dot =>{
+                    dot.addEventListener('click',()=>{
+                        dots.forEach(d => d.classList.remove('active'));
+                        dot.classList.add('active');
+                    });
+                });
+
+                lucide.createIcons();
+
+
+               window.addEventListener("load", () => {
+
+    const hero = document.getElementById("hero-image");
+    const smallImg = document.querySelector(".small-img");
+    const bigImg = document.querySelector(".big-img");
+
+    // STEP 1: move up
+    smallImg.classList.add("up");
+
+    // STEP 2: bounce down after 400ms
+    setTimeout(() => {
+        smallImg.classList.remove("up");
+        smallImg.classList.add("down");
+    }, 400);
+
+    // STEP 3: after bounce → swap image
+    setTimeout(() => {
+
+        // change big image
+        bigImg.src = smallImg.src;
+
+        // optional: hide small image
+        smallImg.style.opacity = "0";
+
+    }, 1500);
+
+});
+
+function gopage(event, el){
+    event.preventDefault(); //stop instant jump
+    const link = el.getAttribute("href");
+    document.body.classList.add("fade-out");
+
+    setTimeout(() =>{
+        window.location.href = link;
+        
+    })
+}
+               </script>
+    </body>
+</html>
